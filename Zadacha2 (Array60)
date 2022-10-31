@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int summ(int a[], const int n, int j, int m) {
+	int summa = 0;
+	for (j; j < n; j++) {
+		summa += a[j];
+	}
+	return summa;
+}
+
+int main() {
+	int* a;
+	int n;
+	cin >> n;
+	a = new int[n];
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	cout << endl;
+	int* b;
+	b = new int[n];
+	for (int j = 0; j < n; j++) {
+		b[j] = summ(a, n, j, n);
+		cout << b[j] << " ";
+	}
+}
